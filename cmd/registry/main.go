@@ -19,6 +19,9 @@ import (
 	_ "github.com/docker/distribution/registry/storage/driver/swift"
 )
 
+/**
+ * 镜像分发注册中心启动入口
+ */
 func main() {
 	registry.RootCmd.Execute()
 }

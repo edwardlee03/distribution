@@ -5,6 +5,7 @@ import (
 )
 
 // TagService provides access to information about tagged objects.
+// TagService 提供对标记对象信息的访问
 type TagService interface {
 	// Get retrieves the descriptor identified by the tag. Some
 	// implementations may differentiate between "trusted" tags and

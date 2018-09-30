@@ -7,8 +7,8 @@ import (
 	"github.com/docker/distribution/configuration"
 )
 
-// EndpointConfig covers the optional configuration parameters for an active
-// endpoint.
+// EndpointConfig covers the optional configuration parameters for an active endpoint.
+// EndpointConfig 涵盖活动端点的可选配置参数
 type EndpointConfig struct {
 	Headers           http.Header
 	Timeout           time.Duration
@@ -41,6 +41,7 @@ func (ec *EndpointConfig) defaults() {
 // Endpoint is a reliable, queued, thread-safe sink that notify external http
 // services when events are written. Writes are non-blocking and always
 // succeed for callers but events may be queued internally.
+// Endpoint 是一个可靠的，排队的，线程安全的接收器，可在写入事件时通知外部HTTP服务
 type Endpoint struct {
 	Sink
 	url  string

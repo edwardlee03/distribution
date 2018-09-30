@@ -12,7 +12,9 @@ import (
 var (
 	legacyDefaultDomain = "index.docker.io"
 	defaultDomain       = "docker.io"
+	// 官方仓库名称
 	officialRepoName    = "library"
+	// 缺省的标记
 	defaultTag          = "latest"
 )
 

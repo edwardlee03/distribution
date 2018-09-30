@@ -39,6 +39,7 @@ type Envelope struct {
 // called "EventRecord".
 
 // Event provides the fields required to describe a registry event.
+// Event 提供描述注册事件所需的字段
 type Event struct {
 	// ID provides a unique identifier for the event.
 	ID string `json:"id,omitempty"`
@@ -93,6 +94,7 @@ type Event struct {
 // situations, this could be from the authorization context of the request.
 // Data in this record can refer to both the initiating client and the
 // generating request.
+// ActorRecord 指定发起事件的代理
 type ActorRecord struct {
 	// Name corresponds to the subject or username associated with the
 	// request context that generated the event.
@@ -108,6 +110,7 @@ type ActorRecord struct {
 }
 
 // RequestRecord covers the request that generated the event.
+// RequestRecord 涵盖生成事件的请求
 type RequestRecord struct {
 	// ID uniquely identifies the request that initiated the event.
 	ID string `json:"id"`
@@ -131,6 +134,7 @@ type RequestRecord struct {
 // SourceRecord identifies the registry node that generated the event. Put
 // differently, while the actor "initiates" the event, the source "generates"
 // it.
+// SourceRecord 标识生成事件的注册节点
 type SourceRecord struct {
 	// Addr contains the ip or hostname and the port of the registry node
 	// that generated the event. Generally, this will be resolved by
@@ -150,6 +154,7 @@ var (
 )
 
 // Sink accepts and sends events.
+// Sink 接受并发送事件
 type Sink interface {
 	// Write writes one or more events to the sink. If no error is returned,
 	// the caller will assume that all events have been committed and will not

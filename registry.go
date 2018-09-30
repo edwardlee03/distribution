@@ -25,6 +25,7 @@ var GlobalScope = Scope(fullScope{})
 // Namespace represents a collection of repositories, addressable by name.
 // Generally, a namespace is backed by a set of one or more services,
 // providing facilities such as registry access, trust, and indexing.
+// 命名空间表示可通过名称寻址的仓库集合
 type Namespace interface {
 	// Scope describes the names that can be used with this Namespace. The
 	// global namespace will have a scope that matches all names. The scope
@@ -94,6 +95,7 @@ func (o WithManifestMediaTypesOption) Apply(m ManifestService) error {
 }
 
 // Repository is a named collection of manifests and layers.
+// Repository 是清单和图层的命名集合
 type Repository interface {
 	// Named returns the name of the repository.
 	Named() reference.Named

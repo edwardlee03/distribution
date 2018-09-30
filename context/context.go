@@ -9,6 +9,7 @@ import (
 
 // instanceContext is a context that provides only an instance id. It is
 // provided as the main background context.
+// instanceContext 是仅提供实例ID的上下文
 type instanceContext struct {
 	context.Context
 	id   string    // id of context, logged as "instance.id"

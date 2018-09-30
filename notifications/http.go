@@ -12,6 +12,7 @@ import (
 // httpSink implements a single-flight, http notification endpoint. This is
 // very lightweight in that it only makes an attempt at an http request.
 // Reliability should be provided by the caller.
+// httpSink 实现单飞行，HTTP通知端点
 type httpSink struct {
 	url string
 

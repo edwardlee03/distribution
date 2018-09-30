@@ -17,6 +17,7 @@ import (
 // Broadcaster sends events to multiple, reliable Sinks. The goal of this
 // component is to dispatch events to configured endpoints. Reliability can be
 // provided by wrapping incoming sinks.
+// Broadcaster 将事件发送到多个可靠的接收器
 type Broadcaster struct {
 	sinks  []Sink
 	events chan []Event
